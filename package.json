@@ -1,0 +1,88 @@
+{
+  "name": "ember-cli-web-components",
+  "version": "0.0.0-development",
+  "description": "The default blueprint for ember-cli addons.",
+  "keywords": [
+    "ember-addon"
+  ],
+  "repository": "",
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "ember build",
+    "lint:hbs": "ember-template-lint .",
+    "lint:js": "eslint --max-warnings 0 ./*.js addon config tests",
+    "start": "ember serve",
+    "test": "COVERAGE=true ember test",
+    "test:all": "ember try:each",
+    "check-coverage": "istanbul check-coverage coverage/coverage-final.json --statements 100 --functions 100 --branches 100 --lines 100",
+    "commit": "git-cz",
+    "posttest": "npm run report-coverage && npm run check-coverage",
+    "report-coverage": "istanbul report --include=coverage/coverage-final.json text",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "ember-cli-babel": "^7.5.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@ember/optional-features": "^0.7.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/exec": "^3.3.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "broccoli-asset-rev": "^3.0.0",
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "^2.1.0",
+    "ember-cli": "^3.8.1",
+    "ember-cli-code-coverage": "^1.0.0-beta.8",
+    "ember-cli-dependency-checker": "^3.0.0",
+    "ember-cli-deploy": "^1.0.2",
+    "ember-cli-deploy-build": "^1.1.1",
+    "ember-cli-deploy-git": "^1.3.3",
+    "ember-cli-htmlbars": "^3.0.0",
+    "ember-cli-htmlbars-inline-precompile": "^2.1.0",
+    "ember-cli-inject-live-reload": "^2.0.1",
+    "ember-cli-sri": "^2.1.1",
+    "ember-cli-template-lint": "^1.0.0-beta.2",
+    "ember-cli-uglify": "^2.1.0",
+    "ember-disable-prototype-extensions": "^1.1.3",
+    "ember-export-application-global": "^2.0.0",
+    "ember-load-initializers": "^2.0.0",
+    "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-qunit": "^4.4.1",
+    "ember-resolver": "^5.1.3",
+    "ember-source": "^3.8.0",
+    "ember-source-channel-url": "^1.1.0",
+    "ember-try": "~0.2.23",
+    "eslint": "^5.15.1",
+    "eslint-config-bbva": "^2.0.4",
+    "eslint-plugin-ember": "^6.2.0",
+    "eslint-plugin-node": "^8.0.1",
+    "husky": "^1.3.1",
+    "istanbul": "^0.4.5",
+    "loader.js": "^4.7.0",
+    "qunit-dom": "^0.8.0",
+    "semantic-release": "^15.13.3"
+  },
+  "engines": {
+    "node": "6.* || 8.* || >= 10.*"
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://bbvaengineering.github.io/ember-cli-web-components"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

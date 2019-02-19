@@ -1,0 +1,7 @@
+{{! template-lint-disable no-bare-strings }}
+
+{{outlet}}
+
+<my-component title="bar" onclick="javascript: console.log('foo')">Content</my-component>
+
+<MyComponent @title="bar">Content</MyComponent>
