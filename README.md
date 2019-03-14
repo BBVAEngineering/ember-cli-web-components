@@ -1,19 +1,21 @@
 ember-cli-web-components
 ==============================================================================
 
-[![Build Status](https://travis-ci.org/BBVAEngineering/ember-cli-web-components.svg?branch=master)](https://travis-ci.org/BBVAEngineering/ember-cli-web-components)
+[![Build Status](https://travis-ci.com/BBVAEngineering/ember-cli-web-components.svg?branch=master)](https://travis-ci.com/BBVAEngineering/ember-cli-web-components)
 [![GitHub version](https://badge.fury.io/gh/BBVAEngineering%2Fember-cli-web-components.svg)](https://badge.fury.io/gh/BBVAEngineering%2Fember-cli-web-components)
 [![NPM version](https://badge.fury.io/js/ember-cli-web-components.svg)](https://badge.fury.io/js/ember-cli-web-components)
 [![Dependency Status](https://david-dm.org/BBVAEngineering/ember-cli-web-components.svg)](https://david-dm.org/BBVAEngineering/ember-cli-web-components)
 [![codecov](https://codecov.io/gh/BBVAEngineering/ember-cli-web-components/branch/master/graph/badge.svg)](https://codecov.io/gh/BBVAEngineering/ember-cli-web-components)
 [![Greenkeeper badge](https://badges.greenkeeper.io/BBVAEngineering/ember-cli-web-components.svg)](https://greenkeeper.io/)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-web-components.svg)](https://emberobserver.com/addons/ember-cli-web-components)
-[![NPM](https://nodei.co/npm/ember-cli-web-components.png?downloads=true&downloadRank=true)](https://nodei.co/npm/ember-cli-web-components/)
 
 This is an experimental addon to allow Ember Components to be reused in apps with other framework, like Vue, React or Polymer, as native Web Components.
 
-Demo: [ember-cli-web-components](https://bbvaengineering.github.io/ember-cli-web-components)
-Inspiration: [Glimmer Web Components](https://github.com/glimmerjs/glimmer-web-component)
+Demo: [ember-cli-web-components](https://bbvaengineering.github.io/ember-cli-web-components).
+
+Inspiration: [Glimmer Web Components](https://github.com/glimmerjs/glimmer-web-component).
+
+[![NPM](https://nodei.co/npm/ember-cli-web-components.png?downloads=true&downloadRank=true)](https://nodei.co/npm/ember-cli-web-components/)
 
 
 Compatibility
