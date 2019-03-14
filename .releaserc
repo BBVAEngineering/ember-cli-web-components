@@ -7,7 +7,7 @@
         "@semantic-release/git",
         "@semantic-release/github",
         ["@semantic-release/exec", {
-            "publishCmd": "npx ember deploy production"
+            "publishCmd": "npx ember deploy production --verbose"
         }]
     ]
 }
