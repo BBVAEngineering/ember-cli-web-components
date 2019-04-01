@@ -150,10 +150,21 @@ function initializeCustomElement(elementName, { name: componentName, attributes:
 				options.onConnect.call(self);
 			}
 
+			const observer = new MutationObserver(() => {
+				if (this.context) {
+					this.context.set('content', this.innerHTML);
+				}
+			});
+
+			// eslint-disable-next-line ember/no-observers
+			observer.observe(this, { childList: true });
+
 			schedule('afterRender', () => {
 				const attrs = getAttributeList(self);
-				const template = compileTemplate(`{{#${componentName} ${attrs}}}${self.innerHTML}{{/${componentName}}}`);
+				const template = compileTemplate(`{{#${componentName} ${attrs}}}{{content}}{{/${componentName}}}`);
 				const { toplevelView, controller } = renderTemplate(owner, template);
+
+				controller.set('content', self.innerHTML);
 
 				setAttributes(controller, self);
 
