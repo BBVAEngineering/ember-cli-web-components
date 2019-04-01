@@ -154,13 +154,13 @@ If you want to contribute to this addon, please read the [CONTRIBUTING.md](CONTR
 Versioning
 ------------------------------------------------------------------------------
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/BBVAEngineering/ember-collector-dispatcher/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/BBVAEngineering/ember-cli-web-components/tags).
 
 
 Authors
 ------------------------------------------------------------------------------
 
-See the list of [contributors](https://github.com/BBVAEngineering/ember-collector-dispatcher/graphs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/BBVAEngineering/ember-cli-web-components/graphs/contributors) who participated in this project.
 
 
 License
