@@ -201,4 +201,18 @@ module('Integration | index', (hooks) => {
 
 		await render(hbs`<my-render data-id="bar"/>`);
 	});
+
+	test('it can render same custom element multiple times', async(assert) => {
+		await render(hbs`<int-my-content data-id="foo">foo</int-my-content>`);
+
+		const foo = find('[data-id="foo"]');
+
+		foo.textContent = 'bar';
+
+		await settled();
+
+		const inner = shadowFind('int-my-content', '[data-id="foo"]');
+
+		assert.equal(inner.textContent.trim(), 'bar');
+	});
 });
