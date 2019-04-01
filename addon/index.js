@@ -135,11 +135,10 @@ function initializeCustomElement(elementName, { name: componentName, attributes:
 
 			const self = this;
 			const shadow = this.attachShadow({ mode: 'open' });
-			const rootElement = document.createElement('div');
 			const eventDispatcher = owner.factoryFor('event_dispatcher:main').create();
 
 			// Hack to fix event_dispatcher need of a parent with classList.
-			shadow.classList = rootElement.classList;
+			shadow.classList = this.classList;
 
 			if (options.onConnect) {
 				options.onConnect.call(self);
@@ -154,11 +153,11 @@ function initializeCustomElement(elementName, { name: componentName, attributes:
 
 				self.context = controller;
 
-				toplevelView.appendTo(rootElement);
+				toplevelView.appendTo(shadow);
 
-				shadow.appendChild(rootElement);
-
-				eventDispatcher.setup(null, rootElement);
+				schedule('afterRender', () => {
+					eventDispatcher.setup(null, shadow.children[0]);
+				});
 
 				if (options.onRender) {
 					options.onRender.call(self);
