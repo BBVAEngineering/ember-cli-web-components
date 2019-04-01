@@ -16,8 +16,8 @@ module('Integration | no-app', (hooks) => {
 		};
 
 		defineCustomElements({
-			'my-component': {
-				name: 'my-component'
+			'fake-component': {
+				name: 'fake-component'
 			}
 		});
 	});
@@ -28,13 +28,13 @@ module('Integration | no-app', (hooks) => {
 	});
 
 	test('it defines custom component', (assert) => {
-		const customElement = customElements.get('my-component');
+		const customElement = customElements.get('fake-component');
 
 		assert.ok(customElement);
 	});
 
 	test('custom element cannot be created', async function(assert) {
-		const element = document.createElement('my-component');
+		const element = document.createElement('fake-component');
 
 		const rootElement = document.querySelector('#ember-testing');
 

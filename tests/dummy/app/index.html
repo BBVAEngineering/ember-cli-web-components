@@ -20,9 +20,43 @@
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/dummy.js"></script>
 
-	<h2>This is not an Ember App!</h1>
+	<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="/">ember-cli-web-components</a>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button" href="https://github.com/BBVAEngineering/ember-cli-web-components">
+							<strong>GiHub</strong>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 
-	<my-component title="This is a Web Component!"/>
+	<section class="section">
+		<div class="container">
+			<h1 class="title">This is not an Ember App!</h1>
+			<h2 class="subtitle">Some examples...</h2>
+			<div class="columns">
+				<div class="column">
+					<div class="box">
+						<p class="subtitle">&lt;my-component/&gt;</p>
+						<my-component>This is a Web Component!</my-component>
+					</div>
+				</div>
+				<div class="column">
+					<div class="box">
+						<p class="subtitle">&lt;my-increment/&gt;</p>
+						<my-increment/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
     {{content-for "body-footer"}}
   </body>

@@ -1,0 +1,18 @@
+<style>
+	button {
+		background: #01d1b2;
+		color: white;
+		padding: 2rem 4rem;
+		border: 0;
+		font-size: 1.5rem;
+		width: 100%;
+	}
+</style>
+
+<button {{action "increment"}}>
+	{{#unless value}}
+		Click me!
+	{{else}}
+		Clicked {{value}} times
+	{{/unless}}
+</button>

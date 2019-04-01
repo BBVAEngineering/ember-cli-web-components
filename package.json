@@ -43,6 +43,7 @@
     "@semantic-release/github": "^5.2.10",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "broccoli-asset-rev": "^3.0.0",
+    "bulma": "^0.7.4",
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
     "ember-cli": "^3.8.1",
@@ -55,6 +56,7 @@
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",
     "ember-cli-inject-live-reload": "^2.0.1",
+    "ember-cli-sass": "^10.0.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^1.0.0-beta.2",
     "ember-cli-uglify": "^2.1.0",
@@ -68,6 +70,7 @@
     "ember-source-channel-url": "^1.1.0",
     "ember-try": "~0.2.23",
     "eslint": "^5.16.0",
+    "ember-typeface": "^1.0.0",
     "eslint-config-bbva": "^2.0.4",
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^8.0.1",
@@ -75,7 +78,9 @@
     "istanbul": "^0.4.5",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0",
-    "semantic-release": "^15.13.3"
+    "sass": "^1.17.3",
+    "semantic-release": "^15.13.3",
+    "typeface-karla": "0.0.72"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
