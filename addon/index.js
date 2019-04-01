@@ -131,6 +131,12 @@ function initializeCustomElement(elementName, { name: componentName, attributes:
 				throw new Error('Cannot find a valid Ember owner to render component.');
 			}
 
+			const klass = owner.resolveRegistration(`component:${componentName}`);
+
+			if (!klass) {
+				return;
+			}
+
 			fixEnvironment(owner);
 
 			const self = this;
