@@ -39,29 +39,29 @@ module('Integration | index', (hooks) => {
 	});
 
 	hooks.beforeEach(function() {
-		this.owner.register('component:my-button', Button);
-		this.owner.register('component:my-content', Content);
+		this.owner.register('component:int-my-button', Button);
+		this.owner.register('component:int-my-content', Content);
 
 		defineCustomElements({
-			'my-button': {
-				name: 'my-button',
+			'int-my-button': {
+				name: 'int-my-button',
 				attributes: ['title']
 			},
-			'my-content': {
-				name: 'my-content',
+			'int-my-content': {
+				name: 'int-my-content',
 				attributes: ['data-id']
 			}
 		});
 	});
 
 	test('it defines custom elements', (assert) => {
-		const customElement = customElements.get('my-button');
+		const customElement = customElements.get('int-my-button');
 
 		assert.ok(customElement);
 	});
 
 	test('custom element can be created', async(assert) => {
-		const element = document.createElement('my-button');
+		const element = document.createElement('int-my-button');
 
 		const rootElement = document.querySelector('#ember-testing');
 
@@ -71,34 +71,34 @@ module('Integration | index', (hooks) => {
 	});
 
 	test('custom element can be rendered', async(assert) => {
-		await render(hbs`<my-button/>`);
+		await render(hbs`<int-my-button/>`);
 
-		const element = find('my-button');
+		const element = find('int-my-button');
 
 		assert.ok(element);
 	});
 
 	test('custom element renders ember component', async(assert) => {
-		await render(hbs`<my-button/>`);
+		await render(hbs`<int-my-button/>`);
 
-		const element = shadowFind('my-button', 'button');
+		const element = shadowFind('int-my-button', 'button');
 
 		assert.ok(element);
 	});
 
 	test('custom element reads attributes', async(assert) => {
-		await render(hbs`<my-button title="foo"/>`);
+		await render(hbs`<int-my-button title="foo"/>`);
 
-		const element = shadowFind('my-button', 'button');
+		const element = shadowFind('int-my-button', 'button');
 
 		assert.equal(element.getAttribute('title'), 'foo');
 	});
 
 	test('custom element binds attributes', async(assert) => {
-		await render(hbs`<my-button title="foo"/>`);
+		await render(hbs`<int-my-button title="foo"/>`);
 
-		const root = find('my-button');
-		const element = shadowFind('my-button', 'button');
+		const root = find('int-my-button');
+		const element = shadowFind('int-my-button', 'button');
 
 		root.setAttribute('title', 'bar');
 
@@ -115,24 +115,24 @@ module('Integration | index', (hooks) => {
 			done();
 		});
 
-		await render(hbs`<my-button onclick={{onclick}}/>`);
+		await render(hbs`<int-my-button onclick={{onclick}}/>`);
 
-		const element = shadowFind('my-button', 'button');
+		const element = shadowFind('int-my-button', 'button');
 
 		await click(element, { composed: true });
 	});
 
 	test('ember component renders content', async(assert) => {
-		await render(hbs`<my-content data-id="content">foo</my-content>`);
+		await render(hbs`<int-my-content data-id="content">foo</int-my-content>`);
 
-		const element = shadowFind('my-content', '[data-id="content"]');
+		const element = shadowFind('int-my-content', '[data-id="content"]');
 
 		assert.ok(element);
 		assert.equal(element.textContent.trim(), 'foo');
 	});
 
 	test('custom element can be reattached', async(assert) => {
-		const element = document.createElement('my-button');
+		const element = document.createElement('int-my-button');
 
 		const rootElement = document.querySelector('#ember-testing');
 
@@ -149,8 +149,8 @@ module('Integration | index', (hooks) => {
 
 	test('it can render same custom element multiple times', async(assert) => {
 		await render(hbs`
-			<my-content data-id="foo">foo</my-content>
-			<my-content data-id="bar">bar</my-content>
+			<int-my-content data-id="foo">foo</int-my-content>
+			<int-my-content data-id="bar">bar</int-my-content>
 		`);
 
 		const foo = find('[data-id="foo"]');

@@ -14,8 +14,10 @@ loadInitializers(App, config.modulePrefix);
 
 defineCustomElements({
 	'my-component': {
-		name: 'my-component',
-		attributes: ['title']
+		name: 'my-component'
+	},
+	'my-increment': {
+		name: 'my-increment'
 	}
 });
 
