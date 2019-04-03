@@ -1,8 +1,8 @@
 "use strict"
 define("dummy/app",["exports","dummy/resolver","ember-load-initializers","dummy/config/environment","ember-cli-web-components"],function(e,t,n,o,a){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-var i=Ember.Application.extend({modulePrefix:o.default.modulePrefix,podModulePrefix:o.default.podModulePrefix,Resolver:t.default});(0,n.default)(i,o.default.modulePrefix),(0,a.defineCustomElements)({"my-component":{name:"my-component"},"my-increment":{name:"my-increment"}})
-var l=i
-e.default=l}),define("dummy/initializers/container-debug-adapter",["exports","ember-resolver/resolvers/classic/container-debug-adapter"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var m=Ember.Application.extend({modulePrefix:o.default.modulePrefix,podModulePrefix:o.default.podModulePrefix,Resolver:t.default});(0,n.default)(m,o.default.modulePrefix),(0,a.defineCustomElements)({"my-component":{name:"my-component"},"my-increment":{name:"my-increment"},"my-slot":{name:"my-slot"},"my-named-slot":{name:"my-named-slot"}})
+var d=m
+e.default=d}),define("dummy/initializers/container-debug-adapter",["exports","ember-resolver/resolvers/classic/container-debug-adapter"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var n={name:"container-debug-adapter",initialize:function(){var e=arguments[1]||arguments[0]
 e.register("container-debug-adapter:main",t.default),e.inject("container-debug-adapter:main","namespace","application:main")}}
 e.default=n}),define("dummy/initializers/export-application-global",["exports","dummy/config/environment"],function(e,t){function n(){var e=arguments[1]||arguments[0]
@@ -22,6 +22,14 @@ var t=Ember.Component.extend({tagName:"",actions:{increment:function(){var e=thi
 this.set("value",e+1)}}})
 e.default=t}),define("dummy/pods/components/my-increment/template",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Ember.HTMLBars.template({id:"pxuiYJOv",block:'{"symbols":[],"statements":[[7,"style"],[9],[0,"\\n\\tbutton {\\n\\t\\tbackground: #01d1b2;\\n\\t\\tcolor: white;\\n\\t\\tpadding: 2rem 4rem;\\n\\t\\tborder: 0;\\n\\t\\tfont-size: 1.5rem;\\n\\t\\twidth: 100%;\\n\\t}\\n"],[10],[0,"\\n\\n"],[7,"button"],[9],[0,"\\n"],[4,"unless",[[23,["value"]]],null,{"statements":[[0,"\\t\\tClick me!\\n"]],"parameters":[]},{"statements":[[0,"\\t\\tClicked "],[1,[21,"value"],false],[0," times\\n"]],"parameters":[]}],[3,"action",[[22,0,[]],"increment"]],[10],[0,"\\n"]],"hasEval":false}',meta:{moduleName:"dummy/pods/components/my-increment/template.hbs"}})
+e.default=t}),define("dummy/pods/components/my-named-slot/component",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var t=Ember.Component.extend({tagName:""})
+e.default=t}),define("dummy/pods/components/my-named-slot/template",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var t=Ember.HTMLBars.template({id:"oOjtiC8g",block:'{"symbols":[],"statements":[[7,"style"],[9],[0,"\\n\\t.block {\\n\\t\\tbackground: #ff3760;\\n\\t\\tcolor: black;\\n\\t\\tpadding: 1rem 4rem;\\n\\t\\tborder: 0;\\n\\t\\tfont-size: 1.5rem;\\n\\t}\\n"],[10],[0,"\\n\\n"],[7,"div"],[11,"class","block"],[9],[0,"\\n\\t"],[7,"h2"],[9],[7,"slot"],[11,"name","header"],[9],[10],[10],[0,"\\n\\t"],[7,"p"],[9],[7,"slot"],[11,"name","paragraph"],[9],[10],[10],[0,"\\n"],[10],[0,"\\n"]],"hasEval":false}',meta:{moduleName:"dummy/pods/components/my-named-slot/template.hbs"}})
+e.default=t}),define("dummy/pods/components/my-slot/component",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var t=Ember.Component.extend({tagName:""})
+e.default=t}),define("dummy/pods/components/my-slot/template",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var t=Ember.HTMLBars.template({id:"+xICXSFw",block:'{"symbols":[],"statements":[[7,"style"],[9],[0,"\\n\\tp {\\n\\t\\tbackground: #b86cff;\\n\\t\\tcolor: white;\\n\\t\\tpadding: 1rem 4rem;\\n\\t\\tborder: 0;\\n\\t\\tfont-size: 1.5rem;\\n\\t}\\n"],[10],[0,"\\n\\n"],[7,"p"],[9],[7,"slot"],[9],[0,"Placeholder"],[10],[10],[0,"\\n"]],"hasEval":false}',meta:{moduleName:"dummy/pods/components/my-slot/template.hbs"}})
 e.default=t}),define("dummy/resolver",["exports","ember-resolver"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var n=t.default
 e.default=n}),define("dummy/router",["exports","dummy/config/environment"],function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0

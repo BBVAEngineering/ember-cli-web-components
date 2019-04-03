@@ -18,7 +18,7 @@
     
 
     <script src="/ember-cli-web-components/assets/vendor-df243a674f6aa2910a2e2b6c6f0d0d72.js"></script>
-    <script src="/ember-cli-web-components/assets/dummy-414d76edcfdce8c49005cfc404d74847.js"></script>
+    <script src="/ember-cli-web-components/assets/dummy-fb616d32f689b3cf495a79306195ce7f.js"></script>
 
 	<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
@@ -52,6 +52,26 @@
 					<div class="box">
 						<p class="subtitle">&lt;my-increment/&gt;</p>
 						<my-increment/>
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column">
+					<div class="box">
+						<p class="subtitle">&lt;my-slot/&gt;</p>
+						<p>With content:</p>
+						<my-slot>This is a slot</my-slot>
+						<p>Without content:</p>
+						<my-slot></my-slot>
+					</div>
+				</div>
+				<div class="column">
+					<div class="box">
+						<p class="subtitle">&lt;my-named-slot/&gt;</p>
+						<my-named-slot>
+							<span slot="header">Header</span>
+							<span slot="paragraph">Paragraph</span>
+						</my-named-slot>
 					</div>
 				</div>
 			</div>
