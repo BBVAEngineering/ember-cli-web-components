@@ -18,6 +18,12 @@ defineCustomElements({
 	},
 	'my-increment': {
 		name: 'my-increment'
+	},
+	'my-slot': {
+		name: 'my-slot'
+	},
+	'my-named-slot': {
+		name: 'my-named-slot'
 	}
 });
 

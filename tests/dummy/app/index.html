@@ -54,6 +54,24 @@
 						<my-increment/>
 					</div>
 				</div>
+				<div class="column">
+					<div class="box">
+						<p class="subtitle">&lt;my-slot/&gt;</p>
+						<p>With content:</p>
+						<my-slot>This is a slot</my-slot>
+						<p>Without content:</p>
+						<my-slot></my-slot>
+					</div>
+				</div>
+				<div class="column">
+					<div class="box">
+						<p class="subtitle">&lt;my-named-slot/&gt;</p>
+						<my-named-slot>
+							<span slot="header">Header</span>
+							<span slot="paragraph">Paragraph</span>
+						</my-named-slot>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
