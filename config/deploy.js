@@ -7,7 +7,7 @@ module.exports = function(deployTarget) {
 		'git-ci': {
 			userName: 'adrigzr',
 			userEmail: 'adrigzr@users.noreply.github.com',
-			deployKey: process.env.DEPLOY_KEY
+			deployKey: `${process.env.DEPLOY_KEY}\n`
 		},
 		git: {
 			worktreePath: 'deploy',
