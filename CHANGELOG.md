@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/BBVAEngineering/ember-cli-web-components/compare/v1.0.1...v1.0.2) (2019-06-25)
+
+
+### Bug Fixes
+
+* **index:** typos ([45b8eef](https://github.com/BBVAEngineering/ember-cli-web-components/commit/45b8eef))
+
 ## [1.0.1](https://github.com/BBVAEngineering/ember-cli-web-components/compare/v1.0.0...v1.0.1) (2019-04-02)
 
 
