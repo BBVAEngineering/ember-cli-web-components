@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.2.7",
-    "ember-cli-babel": "^7.7.3"
+    "ember-cli-babel": "^7.10.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
