@@ -43,7 +43,7 @@
     "@semantic-release/github": "^5.2.10",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "broccoli-asset-rev": "^3.0.0",
-    "bulma": "^0.7.4",
+    "bulma": "^0.8.0",
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^3.0.2",
     "ember-cli": "^3.8.1",
