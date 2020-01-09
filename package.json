@@ -79,7 +79,7 @@
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.9.0",
     "sass": "^1.17.3",
-    "semantic-release": "^15.13.3",
+    "semantic-release": "^16.0.0",
     "typeface-karla": "0.0.72"
   },
   "engines": {
