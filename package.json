@@ -41,7 +41,7 @@
     "@semantic-release/exec": "^3.3.2",
     "@semantic-release/git": "^7.0.8",
     "@semantic-release/github": "^5.2.10",
-    "@semantic-release/release-notes-generator": "^7.1.4",
+    "@semantic-release/release-notes-generator": "^9.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "bulma": "^0.7.4",
     "commitizen": "^3.0.7",
